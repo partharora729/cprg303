@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import  React,{useState} from 'react';
+import ToDoList from './ToDoList';
 
 export default function App() {
+  const  [tasks, SetTasks] = useState([
+    'Do laundry',
+    'Go to gym',
+    'Walk dog'
+  ]);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <ToDoList task ={tasks}/>
       <StatusBar style="auto" />
     </View>
   );
